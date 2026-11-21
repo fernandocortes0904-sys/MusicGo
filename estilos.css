@@ -1,0 +1,401 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf5fa;
+    color: #18334a;
+}
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+/* Menu lateral */
+.menu {
+    width: 230px;
+    background-color: #123c60;
+    color: white;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #48e0a4;
+    margin-bottom: 35px;
+    font-size: 25px;
+}
+
+.menu nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.menu nav a:hover {
+    background-color: #24577c;
+    color: #48e0a4;
+}
+
+.menu-extra {
+    margin-top: 35px;
+}
+
+.menu-extra h3 {
+    margin-bottom: 15px;
+    color: #48e0a4;
+}
+
+.menu-extra p {
+    margin: 15px 0;
+    color: #d6e5ef;
+}
+
+/* Contenido principal */
+.contenido {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.encabezado h2 {
+    color: #123c60;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #647d90;
+}
+
+.perfil {
+    background-color: #48e0a4;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 22px;
+}
+
+/* Buscador */
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d5e4ed;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    border-color: #27b982;
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 35px;
+}
+
+.seccion h2 {
+    margin-bottom: 20px;
+    color: #123c60;
+}
+
+/* Generos musicales */
+.generos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.genero {
+    padding: 25px 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pop { background-color: #2676ad; }
+.rock { background-color: #17654e; }
+.rap { background-color: #28508d; }
+.elec { background-color: #21a77b; }
+
+/* Tarjetas de canciones */
+.canciones {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px #123c6015;
+    transition: transform 0.2s;
+    min-width: 0;
+}
+
+.tarjeta:hover { transform: translateY(-5px); }
+
+.portada {
+    height: 145px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.portada1 { background: linear-gradient(135deg, #54d6b0, #2676ad); }
+.portada2 { background: linear-gradient(135deg, #17654e, #8ce8bb); }
+.portada3 { background: linear-gradient(135deg, #123c60, #718fe0); }
+.portada4 { background: linear-gradient(135deg, #2b9d8f, #173d69); }
+
+.tarjeta h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: #647d90;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tarjeta button {
+    background-color: #21b982;
+    color: #123c60;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.tarjeta button:hover { background-color: #48e0a4; }
+
+/* Playlist */
+.playlist {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.playlist span {
+    font-size: 40px;
+    background-color: #d8f8eb;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.playlist h3 { margin-bottom: 8px; }
+.playlist p { color: #647d90; }
+
+/* Reproductor inferior */
+.reproductor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80px;
+    background-color: #123c60;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+}
+
+.cancion-actual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.cancion-actual span {
+    font-size: 28px;
+    color: #48e0a4;
+}
+
+.cancion-actual strong { overflow-wrap: anywhere; }
+
+.cancion-actual p {
+    color: #c4d7e5;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.controles {
+    display: flex;
+    gap: 12px;
+}
+
+.controles button {
+    background-color: #48e0a4;
+    color: #123c60;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controles button:hover { background-color: white; }
+
+.estado {
+    color: #c4d7e5;
+    font-size: 13px;
+}
+
+/* Adaptacion para celulares */
+@media (max-width: 900px) {
+    .canciones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .generos { grid-template-columns: repeat(2, 1fr); }
+    .estado { display: none; }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        width: 90px;
+        padding: 15px 8px;
+    }
+
+    .logo {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .menu nav a {
+        font-size: 12px;
+        padding: 12px 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .menu-extra { display: none; }
+    .contenido { padding: 18px 12px; }
+    .encabezado h2 { font-size: 20px; }
+    .portada { height: 110px; }
+
+    .reproductor {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .cancion-actual { flex: 1; }
+    .cancion-actual strong { font-size: 12px; }
+    .controles { gap: 5px; }
+
+    .controles button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+.suscripcion {
+  font-family: Arial, sans-serif;
+}
+.checks {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 5px 0 15px 0;
+}
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  font-size: 15px;
+  margin: 8px 0 15px 0;
+}
+.boton-premium {
+  width: 100%;
+  background: #ff9f1a;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+.nota {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  margin-top: 12px;
+}
+.fila-chiquita { display: flex; gap: 20px; align-items: flex-start; }
+.fecha-3 { display: flex; align-items: center; gap: 5px; }
+#dia, #mes, #anio, #edad { height: 42px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 10px; font-size: 15px; }
+#dia { width: 60px; }
+#mes { width: 115px; }
+#anio { width: 80px; }
+
+
+.num-flechas {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.num-flechas input {
+  border: none;
+  outline: none;
+  height: 100%;
+  min-width: 0;
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+}
+
+/* DIA más ancho */
+#dia { width: 55px; }
+#dia + .flechas, .num-flechas:has(#dia) { width: 88px; }
+
+/* AÑO más ancho, porque son 4 números */
+#anio { width: 70px; }
+.num-flechas:has(#anio) { width: 108px; }
+
+.flechas { display: flex; flex-direction: column; }
+.flechas button {
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  height: 21px;
+  width: 24px;
+  font-size: 9px;
+  line-height: 1;
+}
