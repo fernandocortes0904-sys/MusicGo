@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicGo | Tu música</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="menu">
+            <h1 class="logo">♪ MusicGo</h1>
+            <nav>
+                <a href="index.html">🏠 Inicio</a>
+                <a href="charles.html">Charles Ans</a>
+                <a href="adan.html">Adán Cruz</a>
+                <a href="gera.html">Gera Mx</a>
+                <a href="rels.html">Rels B</a>
+                <a href="fuerza.html">Fuerza Regida</a>
+                <a href="formulario.html">Suscripción</a>
+            </nav>
+            <div class="menu-extra">
+             <h3>Autor</h3>
+                <p>Diego Fernando Cortés Maceda</p>
+                <p>Año de edición</p>
+                <p>2026</p>
+             </aside>
+
+        <main class="contenido" id="inicio">
+            <header class="encabezado">
+                <div>
+                    <h2>Bienvenido a MusicGo, donde cada canción puede cambiar tu momento.</h2>
+                    <p>Un clic, una canción y miles de emociones.</p>
+                </div>
+                <div class="perfil"><img src="logo.png" height="70" width="80" border=""></div>
+            </header>
+
+            <section class="seccion" id="biblioteca">
+                <h2>Recomendado para ti</h2>
+                <div class="canciones">
+                    <article class="tarjeta">
+                    <a href="gera.html">
+                        <div class="portada portada1"><img src="gera.jpg" height="145" width="210" border="1"></div>
+                        </a>
+                        <h3>Gera Mx</h3>
+                        <p></p>
+                    </article>
+                    <article class="tarjeta">
+                    <a href="charles.html">
+                        <div class="portada portada2"><img src="charles.jpg" height="145" width="210" border="1"></div>
+                        </a>
+                        <h3>Charles Ans</h3>
+                        <p></p>
+                    </article>
+                    <article class="tarjeta">
+                    <a href="rels.html">
+                        <div class="portada portada3"><img src="rels.jpg" height="145" width="210" border="1"></div>
+                        </a>
+                        <h3>Rels B</h3>
+                        <p></p>
+                    </article>
+                    <article class="tarjeta">
+                    <a href="adan.html">
+                        <div class="portada portada4"><img src="adan.jpg" height="145" width="210" border="1"></div>
+                        </a>
+                        <h3>Adán Cruz</h3>
+                        <p></p>
+                    </article>
+                    <article class="tarjeta">
+                    <a href="fuerza.html">
+                        <div class="portada portada4"><img src="fuerza.jpg" height="145" width="210" border="1"></div>
+                        </a>
+                        <h3>Fuerza Regida</h3>
+                        <p></p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <h2>Tu playlist del día</h2>
+                <div class="playlist">
+                    <span>🎵</span>
+                    <div>
+                        <h3></h3>
+                        <p></p>
+                        <div style="display:flex; flex-direction:column; gap:10px margin-top:15">
+                        <h3>Charles Ans</h3>
+                        <p>Esta Noche</p>
+                        <audio controls src="audio 1.mp3"></audio>
+                        <h3>Adán cruz</h3>
+                        <p>Por Ti</p>
+                        <audio controls src="audio 2.mp3"></audio>
+                        <h3>Gera Mx</h3>
+                        <p>Huracán</p>
+                        <audio controls src="audio 3.mp3"></audio>
+                        <h3>Rels B</h3>
+                        <p>A Mi</p>
+                        <audio controls src="audio 4.mp3"></audio>
+                        <h3>Fuerza Regida</h3>
+                        <p>Coqueta</p>
+                        <audio controls src="audio 5.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <script>
+        function reproducir(cancion) {
+            document.getElementById("titulo").textContent = cancion;
+        }
+    </script>
+</body>
+</html>
