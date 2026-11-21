@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suscripción a MusicGo</title>
+<link rel="stylesheet" href="estilos_actualizados.css">
+<script src="validaciones_actualizadas.js" defer></script>
+</head>
+<body>
+<div class="contenedor">
+
+<aside class="menu">
+<h1 class="logo">♪ MusicGo</h1>
+<nav>
+<a href="index.html#inicio">🏠 Inicio</a>
+<a href="index.html#charles">Charles Ans</a>
+<a href="index.html#adan">Adán Cruz</a>
+<a href="index.html#gera">Gera Mx</a>
+<a href="index.html#rels">Rels B</a>
+<a href="index.html#fuerza">Fuerza Regida</a>
+<a href="formulario.html" class="activo">Suscripción</a>
+</nav>
+<div class="menu-extra">
+<h3>Autor</h3>
+<p>Diego Fernando Cortés Maceda</p>
+<p>Año de edición</p>
+<p>2026</p>
+</aside>
+
+<main class="contenido">
+<form id="formulario" novalidate>
+<h1 class="titulo-suscripcion">Suscripción a MusicGo</h1>
+
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" maxlength="100" required>
+<small class="error" id="error-nombre"></small>
+
+<label for="paterno">Apellido paterno</label>
+<input type="text" id="paterno" maxlength="100" required>
+<small class="error" id="error-paterno"></small>
+
+<label for="materno">Apellido materno</label>
+<input type="text" id="materno" maxlength="100" required>
+<small class="error" id="error-materno"></small>
+
+<div class="fila">
+<div class="campo-edad">
+<label for="edad">Edad</label>
+<input type="text" id="edad" inputmode="numeric" maxlength="3" placeholder="18" required>
+<small class="error" id="error-edad"></small>
+</div>
+<div class="campo-fecha">
+<label for="fecha">Fecha de nacimiento</label>
+<input type="date" id="fecha" required>
+<small class="error" id="error-fecha"></small>
+</div>
+</div>
+
+<label for="tarjeta">Numero de tarjeta</label>
+<input type="text" id="tarjeta" placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19" required>
+<small class="error" id="error-tarjeta"></small>
+
+<label for="email">Correo electrónico</label>
+<input type="email" id="email" required>
+<small class="error" id="error-email"></small>
+
+<p class="titulo-incluye">¿Qué incluye tu suscripción?</p>
+<p class="incluye">✓ Música sin anuncios &nbsp; ✓ Descargar canciones</p>
+<p class="incluye">✓ Escuchar sin internet</p>
+
+<label for="plan">Elige tu plan</label>
+<select id="plan" required>
+<option value="">Selecciona un plan</option>
+<option value="individual">Individual - $129 / mes</option>
+<option value="estudiantes">Estudiantes - $69 / mes</option>
+<option value="duo">Duo - $169 / mes</option>
+<option value="familiar">Familiar - $199 / mes</option>
+</select>
+<small class="error" id="error-plan"></small>
+
+<button type="submit" class="btn-premium">Suscribirme a Premium →</button>
+<p class="nota">1 mes gratis, después se cobra tu plan. Puedes cancelar cuando quieras.</p>
+<p id="mensaje" role="status" aria-live="polite"></p>
+
+</form>
+</main>
+</div>
+</body>
+</html>
